@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->mediumText('black_list_words')->nullable();
             $table->string('avatar')->default('/assets/user.png');
             $table->string('token')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
