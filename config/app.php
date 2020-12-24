@@ -166,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
+     //   Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -176,13 +176,13 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        
+
         \SocialiteProviders\Manager\ServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-        Tylercd100\Validator\Color\ServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
-        
-        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
+   //     Collective\Html\HtmlServiceProvider::class,
+   //     Tylercd100\Validator\Color\ServiceProvider::class,
+        //Yajra\Datatables\DatatablesServiceProvider::class,
+
+      //  Srmklive\PayPal\Providers\PayPalServiceProvider::class,
     ],
 
     /*
@@ -234,7 +234,7 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Datatables' => Yajra\Datatables\Facades\Datatables::class,    
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'PayPal' => Srmklive\PayPal\Facades\PayPal::class
     ],
 

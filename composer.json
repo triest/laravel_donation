@@ -5,18 +5,12 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
-        "laravel/framework": "5.4.*",
-        "laravel/socialite": "^3.0",
-        "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.4.0",
+        "php": "^7.1",
+        "laravel/framework": "6.*",
         "socialiteproviders/mixer": "^1.0",
         "socialiteproviders/twitch": "^3.0",
         "socialiteproviders/vkontakte": "^3.0",
-        "socialiteproviders/youtube": "^3.0",
-        "srmklive/paypal": "~1.0",
-        "tylercd100/laravel-validator-color": "^3.0",
-        "yajra/laravel-datatables-oracle": "^7.5"
+        "socialiteproviders/youtube": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
