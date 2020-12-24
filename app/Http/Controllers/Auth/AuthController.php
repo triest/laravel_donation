@@ -17,7 +17,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => ['getLogout', 'getCheck', 'getSuccess']]);
-        
+
         // Auth methods
         $this->methods = ['youtube', 'twitch', 'mixer'];
         foreach ($this->methods as $key => $method) {
@@ -76,7 +76,7 @@ class AuthController extends Controller
 
         // Socialite
         $socialite = Socialite::with($slug)->user();
-        
+
         // Get user
         $user = User::where('token', $slug . '::' . $socialite->getId())->first();
 
@@ -91,10 +91,10 @@ class AuthController extends Controller
         if ($slug == 'mixer') {
             $user_data['name'] = $socialite->user['username'];
         }
-        
+
         // Create user
         if (!$user) {
-            
+
             if ($user = User::create($user_data)) {
                 // Login
                 Auth::login($user, true);
@@ -102,7 +102,7 @@ class AuthController extends Controller
             } else {
                 return redirect()->route('login')->with('danger', trans('auth.messages.auth_error'));
             }
-        // Login
+            // Login
         } else {
             // Update information
             $user->update($user_data);

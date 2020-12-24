@@ -14,16 +14,19 @@
 /* Home & Dashboard */ {
     Route::get('/', ['uses' => 'HomeController@getHome', 'as' => 'home']);
 }
+Auth::routes();
 
-/* Auth */ {
+/* Auth */
+/*{
     Route::get('/auth', ['uses' => 'Auth\AuthController@getLogin', 'as' => 'login']);
     Route::get('/auth/check', ['uses' => 'Auth\AuthController@getCheck', 'as' => 'auth.check']);
     Route::get('/auth/success', ['uses' => 'Auth\AuthController@getSuccess', 'as' => 'auth.success']);
     Route::get('/auth/logout', ['uses' => 'Auth\AuthController@getLogout', 'as' => 'auth.logout']);
+
     Route::get('/auth/{slug}', ['uses' => 'Auth\AuthController@getRedirect', 'as' => 'auth.redirect'])->where(['slug' => '[A-Za-z]+']);
     Route::any('/auth/{slug}/callback', ['uses' => 'Auth\AuthController@getCallback', 'as' => 'auth.service.callback'])->where(['slug' => '[A-Za-z]+']);
 }
-
+*/
 /* Settings */ {
     // Account Settings
     Route::get('/settings/account', ['uses' => 'SettingsController@getAccount', 'as' => 'settings.account']);
@@ -122,3 +125,35 @@
         Route::post('/apanel/conditions', ['uses' => 'ApanelController@postConditions', 'as' => 'apanel.conditions.save']);
     }
 }
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
